@@ -21,7 +21,8 @@ import { I18nProvider, useI18n } from "@/lib/i18n-context";
 import { AuthProvider } from "@/lib/auth";
 import { CartProvider } from "@/lib/cart";
 import { ServiceWorkerRegistrar } from "@/components/service-worker";
-import { Button } from "@/components/ui/button";const metaPixelScript = !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','461866932083253');fbq('track','PageView');;
+import { Button } from "@/components/ui/button";
+const metaPixelScript = "!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','461866932083253');fbq('track','PageView');";
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   // Runs on the server for the first request and in the browser after, reading
