@@ -64,6 +64,12 @@ export function QuickOrder({
       );
       return;
     }
+    if (typeof window !== "undefined") {
+  (window as any).fbq?.("track", "Purchase", {
+    value: subtotal + (wilaya ? delivery.fee : 0),
+    currency: "DZD",
+  });
+}
     setPlaced(result.token);
   };
 
