@@ -77,6 +77,12 @@ function CheckoutPage() {
       );
       return;
     }
+    if (typeof window !== "undefined") {
+  (window as any).fbq?.("track", "Purchase", {
+    value: cart.subtotal + (form.wilaya ? delivery.fee : 0),
+    currency: "DZD",
+  });
+}
     cart.clear();
     setPlacedToken(result.token);
   };
